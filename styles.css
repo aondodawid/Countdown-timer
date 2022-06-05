@@ -1,0 +1,198 @@
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+  height: 100%;
+}
+
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/**
+*Minimal reset
+*/
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+  height: 100%;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/**
+* Rest of styles
+*/
+body {
+  font-size: 14px;
+  background-image: url(./images/bg-stars.svg);
+  background-color: #191A23;
+  color: white;
+  font-family: 'Red Hat Text', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+header {
+  margin: 118px auto  30px;
+  padding: 24px 4rem;
+  text-align: center;
+}
+
+footer {
+  background-image: url(./images/pattern-hills.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  padding: auto 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+article {
+  margin: 0 1.5rem 140px;
+  padding: 1.5rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.foooter--icons__wrapper {
+  margin: 96px auto 48px;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+h1 {
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  display: inline-block;
+  padding: 0 24px;
+}
+
+section {
+  text-align: center;
+  margin: 0 auto;
+  color: #8385A9;
+  font-size: 7px;
+}
+
+div {
+  padding: 1rem 0;
+  background-color: #343650;
+  border-radius: 8px;
+  width: 4.25rem;
+  margin-bottom: 9px;
+}
+
+.article--clock {
+  font-size: 2rem;
+  color: #FB5E84;
+}
+
+svg {
+  margin: 0 1rem;
+  cursor: pointer;
+}
+
+path:hover {
+  fill: #FB5E84;
+}
+
+@media only screen and (max-width: 295px) {
+  header {
+    padding: 1.5rem 0;
+  }
+  div {
+    width: 3.75rem;
+  }
+  .article--clock {
+    font-size: 1.5rem;
+    color: #FB5E84;
+  }
+  article {
+    margin: 0 0.5rem 140px;
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  section {
+    font-size: 14px;
+  }
+  header {
+    margin: 120px auto  93px;
+    padding: 0;
+  }
+  article {
+    margin: 0 0.5rem 151px;
+    row-gap: 0.5rem;
+    padding: 0 198px;
+  }
+  div {
+    width: 9.25rem;
+    padding: 2rem 0;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  .article--clock {
+    font-size: 4rem;
+  }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 963px) {
+  article {
+    padding: 0;
+  }
+  div {
+    width: 6.75rem;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
