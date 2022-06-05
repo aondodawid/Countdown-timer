@@ -2,19 +2,12 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-html {
+ html {
   line-height: 1.15;
   /* 1 */
   -webkit-text-size-adjust: 100%;
+  height: 100%
   /* 2 */
-}
-
-/**
- * Render the `main` element consistently in IE.
- */
-main {
-  display: block;
-  height: 100%;
 }
 
 /**
@@ -36,7 +29,6 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
   margin: 0;
   padding: 0;
   font-weight: normal;
-  height: 100%;
 }
 
 h1 {
@@ -53,18 +45,25 @@ img {
 * Rest of styles
 */
 body {
-  font-size: 14px;
+  font-size: 16px;
   background-image: url(./images/bg-stars.svg);
   background-color: #191A23;
   color: white;
   font-family: 'Red Hat Text', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
+ height: 100%
+}
+
+main {
+    display: grid;
+    grid-template-rows: header article article footer;
+    height: 100%;
 }
 
 header {
-  margin: 118px auto  30px;
-  padding: 24px 4rem;
+  margin: 5.5rem auto  2rem;
+  padding: 1.5rem 4rem;
   text-align: center;
 }
 
@@ -79,12 +78,12 @@ footer {
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center;
-  height: 100%;
+          justify-content: center;         
+  height: 100%
 }
 
 article {
-  margin: 0 1.5rem 140px;
+  margin: 0 0.5rem 7rem;
   padding: 1.5rem auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -95,11 +94,11 @@ article {
           flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center;
+          justify-content: center;         
 }
 
 .foooter--icons__wrapper {
-  margin: 96px auto 48px;
+  margin: 6rem auto 3rem;
   background-color: transparent;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -110,18 +109,18 @@ article {
 }
 
 h1 {
-  font-size: 18px;
-  line-height: 23px;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
   text-align: center;
   display: inline-block;
-  padding: 0 24px;
+  padding: 0 0.5rem;
 }
 
 section {
   text-align: center;
   margin: 0 auto;
   color: #8385A9;
-  font-size: 7px;
+  font-size: 0.5rem ;
 }
 
 div {
@@ -129,7 +128,7 @@ div {
   background-color: #343650;
   border-radius: 8px;
   width: 4.25rem;
-  margin-bottom: 9px;
+  margin-bottom: 0.5rem;
 }
 
 .article--clock {
@@ -148,51 +147,67 @@ path:hover {
 
 @media only screen and (max-width: 295px) {
   header {
-    padding: 1.5rem 0;
+    padding: 1rem 0 0;
+    margin:  0.5rem 0 0;
   }
+
   div {
-    width: 3.75rem;
+    width: 2.5rem;
   }
+
   .article--clock {
     font-size: 1.5rem;
     color: #FB5E84;
   }
+
   article {
-    margin: 0 0.5rem 140px;
+    margin: 0 0 6rem;
   }
 }
 
 @media only screen and (min-width: 375px) {
+
   section {
-    font-size: 14px;
+    font-size: 1rem;
+    margin: 0 2rem;
   }
+
   header {
-    margin: 120px auto  93px;
+    margin: 7.5rem auto  6rem;
     padding: 0;
   }
+
   article {
-    margin: 0 0.5rem 151px;
-    row-gap: 0.5rem;
-    padding: 0 198px;
+    margin: 0 9.5rem 22rem;
+    padding: 0 auto;
   }
+
   div {
-    width: 9.25rem;
+    width: 8rem;
     padding: 2rem 0;
   }
+    
   h1 {
     font-size: 1.5rem;
   }
+
   .article--clock {
     font-size: 4rem;
   }
 }
 
-@media only screen and (min-width: 375px) and (max-width: 963px) {
+@media only screen and (min-width: 375px) and (max-width: 960px) {
+
   article {
-    padding: 0;
+    margin: 0 0 22rem;
   }
-  div {
-    width: 6.75rem;
+
+   div {
+    width: 6rem;
+    padding: 2rem 0;
+  }
+
+  section {
+    margin: 0 auto;
   }
 }
-/*# sourceMappingURL=styles.css.map */
