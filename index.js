@@ -1,13 +1,13 @@
 const finishDate = new Date(2022, 5, 26, 10);
 
-function calculateDateLetf(timeDiference) {
-  const date = {
-    days: document.getElementById("days"),
-    seconds: document.getElementById("second"),
-    minutes: document.getElementById("minutes"),
-    hours: document.getElementById("hours"),
-  };
+const date = {
+  days: document.getElementById("days"),
+  seconds: document.getElementById("second"),
+  minutes: document.getElementById("minutes"),
+  hours: document.getElementById("hours"),
+};
 
+function calculateTimeLetf(timeDiference, date) {
   const daysLeft = Math.floor(timeDiference / 24 / 60 / 60 / 1000);
 
   const hoursLeft = Math.floor(
@@ -29,19 +29,31 @@ function calculateDateLetf(timeDiference) {
       minutesLeft * 60 * 1000) /
       1000
   );
-  return (
-    (date.days.textContent = daysLeft),
-    (date.seconds.textContent = secondsLeft),
-    (date.minutes.textContent = minutesLeft),
-    (date.hours.textContent = hoursLeft)
-  );
+  switch (date) {
+    case "days":
+      return daysLeft;
+      break;
+    case "hours":
+      return hoursLeft;
+      break;
+    case "minutes":
+      return minutesLeft;
+      break;
+    case "seconds":
+      return secondsLeft;
+      break;
+  }
 }
 
-function countTime() {
+function updateTimeLeft() {
   const currentTime = Date.now();
 
   const timeDiference = finishDate - currentTime;
-  calculateDateLetf(timeDiference);
+
+  date.days.textContent = calculateTimeLetf(timeDiference, "days");
+  date.hours.textContent = calculateTimeLetf(timeDiference, "hours");
+  date.minutes.textContent = calculateTimeLetf(timeDiference, "minutes");
+  date.seconds.textContent = calculateTimeLetf(timeDiference, "seconds");
 }
 
-setInterval(countTime, 1000);
+setInterval(updateTimeLeft, 1000);
